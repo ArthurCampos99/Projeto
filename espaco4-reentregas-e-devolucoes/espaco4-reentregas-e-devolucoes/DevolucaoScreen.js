@@ -30,7 +30,7 @@ export default function App() {
   const [produtos, setProdutos] = useState([{ produto: '', quantidade: '', unidade: '', peso: '' }]);
   const [local, setLocal] = useState('');
   const [motivo, setMotivo] = useState('');
-  const [mostrarDropdown, setMostrarDropdown] = useState(null); // 'cliente' ou 'motivo'
+  const [mostrarDropdown, setMostrarDropdown] = useState(null); 
   const [data, setData] = useState('');
   const [notaFiscal, setNotaFiscal] = useState('');
   const [dados, setDados] = useState({ Reentregas: {}, Devoluções: {} });
@@ -113,7 +113,6 @@ export default function App() {
       {viewForm && (
         <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
           <View style={styles.form}>
-            {/* DROPDOWN CLIENTE */}
             <Text style={styles.label}>Cliente:</Text>
             <TouchableOpacity onPress={() => setMostrarDropdown(m => m === 'cliente' ? null : 'cliente')} style={styles.dropdown}>
               <Text style={styles.dropdownText}>{cliente || 'Selecionar cliente'}</Text>
